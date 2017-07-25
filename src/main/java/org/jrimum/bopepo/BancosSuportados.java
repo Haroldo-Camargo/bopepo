@@ -207,6 +207,15 @@ public enum BancosSuportados{
 	BANCO_BRADESCO("237", "60746948000112", "BANCO BRADESCO S.A.", "Banco Múltiplo"),
 
 	/**
+	 * Tipo enumerado que representa o Banco <strong>ABC</strong>, código
+	 * de compensação <strong><tt>246</tt></strong> <a
+	 * href="https://www.abcbrasil.com.br/">site</a>.
+	 * 
+	 * @since 0.2
+	 */
+	BANCO_ABC("246", "28195667000106", "BANCO ABC BRASIL", "Banco Múltiplo"),
+	
+	/**
 	 * Tipo enumerado que representa o <strong>Banco Itaú</strong>, código de
 	 * compensação <strong><tt>341</tt></strong> <a
 	 * href="http://www.	.com.br">site</a>.
@@ -330,6 +339,7 @@ public enum BancosSuportados{
 		suportados.put(CITIBANK.codigoDeCompensacaoBACEN, CITIBANK);
 		suportados.put(BANCO_DE_BRASILIA.codigoDeCompensacaoBACEN, BANCO_DE_BRASILIA);
 		suportados.put(CECRED.codigoDeCompensacaoBACEN, CECRED);
+		suportados.put(BANCO_ABC.codigoDeCompensacaoBACEN, BANCO_ABC);
 	}
 
 	/**
