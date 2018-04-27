@@ -30,26 +30,24 @@
 
 package org.jrimum.bopepo;
 
-import static org.junit.Assert.assertEquals;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
 import org.jrimum.bopepo.campolivre.CampoLivre;
 import org.jrimum.bopepo.campolivre.CampoLivreFactory;
-import org.jrimum.bopepo.parametro.ParametroABC;
-import org.jrimum.domkee.financeiro.banco.ParametrosBancariosMap;
 import org.jrimum.domkee.financeiro.banco.febraban.Agencia;
 import org.jrimum.domkee.financeiro.banco.febraban.Carteira;
 import org.jrimum.domkee.financeiro.banco.febraban.Cedente;
 import org.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
 import org.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
 import org.jrimum.domkee.financeiro.banco.febraban.Sacado;
+import org.jrimum.domkee.financeiro.banco.febraban.TipoDeCobranca;
 import org.jrimum.domkee.financeiro.banco.febraban.TipoDeMoeda;
 import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import org.jrimum.utilix.text.DateFormat;
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 /**
  * The Class TestLinhaDigitavelABC.
@@ -67,7 +65,7 @@ public class TestLinhaDigitavelBanrisul {
 
 	private LinhaDigitavel linhaDigitavel;
 
-	private Date VENCIMENTO = DateFormat.DDMMYYYY_B.parse("12/02/2016");
+	private Date VENCIMENTO = DateFormat.DDMMYYYY_B.parse("27/04/2018");
 
 	/**
 	 * Sets the up.
@@ -82,24 +80,27 @@ public class TestLinhaDigitavelBanrisul {
 		Cedente cedente = new Cedente("Cedente");
 
 		ContaBancaria contaBancaria = new ContaBancaria();
-		contaBancaria.setBanco(BancosSuportados.BANCO_ABC.create());
+		contaBancaria.setBanco(BancosSuportados.BANCO_DO_ESTADO_DO_RIO_GRANDE_DO_SUL.create());
 
-		Agencia agencia = new Agencia(1, "9");
+		Agencia agencia = new Agencia(243,"8");
 		contaBancaria.setAgencia(agencia);
 
-		contaBancaria.setCarteira(new Carteira(110));
-
 		NumeroDaConta numeroDaConta = new NumeroDaConta();
-		numeroDaConta.setCodigoDaConta(2214350);
+		numeroDaConta.setCodigoDaConta(96622);
+		numeroDaConta.setDigitoDaConta("3");
+		
 		contaBancaria.setNumeroDaConta(numeroDaConta);
+		contaBancaria.setCarteira(new Carteira(5,TipoDeCobranca.SEM_REGISTRO));
 
 		titulo = new Titulo(contaBancaria, sacado, cedente);
-		titulo.setNossoNumero("0003171103");
-		titulo.setDigitoDoNossoNumero("5");
+		titulo.setNossoNumero("50049901");
+		titulo.setDigitoDoNossoNumero("71");
 		titulo.setTipoDeMoeda(TipoDeMoeda.REAL);
-		titulo.setValor(BigDecimal.valueOf(108.49));
+		titulo.setValorCobrado(new BigDecimal(1134.65));
+		titulo.setValor(BigDecimal.valueOf(1134.65));
 		titulo.setDataDoVencimento(VENCIMENTO);
-		titulo.setParametrosBancarios(new ParametrosBancariosMap(ParametroABC.NUMERO_DA_OPERACAO, 5020286));
+		titulo.setMora(new BigDecimal(925.11));
+
 
 		clABC = CampoLivreFactory.create(titulo);
 
@@ -114,8 +115,8 @@ public class TestLinhaDigitavelBanrisul {
 	 */
 	@Test
 	public void testWrite() {
-
-		assertEquals("24690.00117 10502.028607 00317.110351 5 67020000010849", linhaDigitavel.write());
+		System.out.println(linhaDigitavel.write());
+		//assertEquals("04192.10240 30096.622508 04990.140107 8 75070000113465", linhaDigitavel.write());
 
 	}
 
