@@ -50,7 +50,7 @@ import org.jrimum.vallia.digitoverificador.Modulo;
  * @since 0.2
  * 
  * @version 0.2
- */
+ */ 
 abstract class AbstractCLItau extends AbstractCampoLivre {
 	
 	/**
