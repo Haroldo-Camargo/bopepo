@@ -30,6 +30,8 @@
 
 package org.jrimum.bopepo;
 
+import static org.junit.Assert.assertEquals;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -47,7 +49,6 @@ import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import org.jrimum.utilix.text.DateFormat;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 
 /**
  * The Class TestLinhaDigitavelABC.
@@ -65,7 +66,7 @@ public class TestLinhaDigitavelBanrisul {
 
 	private LinhaDigitavel linhaDigitavel;
 
-	private Date VENCIMENTO = DateFormat.DDMMYYYY_B.parse("27/04/2018");
+	private Date VENCIMENTO = DateFormat.DDMMYYYY_B.parse("15/07/2018");
 
 	/**
 	 * Sets the up.
@@ -82,24 +83,23 @@ public class TestLinhaDigitavelBanrisul {
 		ContaBancaria contaBancaria = new ContaBancaria();
 		contaBancaria.setBanco(BancosSuportados.BANCO_DO_ESTADO_DO_RIO_GRANDE_DO_SUL.create());
 
-		Agencia agencia = new Agencia(243,"8");
+		Agencia agencia = new Agencia(243);
 		contaBancaria.setAgencia(agencia);
 
-		NumeroDaConta numeroDaConta = new NumeroDaConta();
-		numeroDaConta.setCodigoDaConta(96622);
-		numeroDaConta.setDigitoDaConta("3");
+		NumeroDaConta numeroDaConta = new NumeroDaConta(96622,"35");
+
 		
 		contaBancaria.setNumeroDaConta(numeroDaConta);
 		contaBancaria.setCarteira(new Carteira(5,TipoDeCobranca.SEM_REGISTRO));
 
 		titulo = new Titulo(contaBancaria, sacado, cedente);
-		titulo.setNossoNumero("50049901");
-		titulo.setDigitoDoNossoNumero("71");
+		titulo.setNossoNumero("50051847");
+		titulo.setDigitoDoNossoNumero("72");
 		titulo.setTipoDeMoeda(TipoDeMoeda.REAL);
-		titulo.setValorCobrado(new BigDecimal(1134.65));
-		titulo.setValor(BigDecimal.valueOf(1134.65));
+		titulo.setValorCobrado(new BigDecimal(3996.10));
+		titulo.setValor(BigDecimal.valueOf(3996.10));
 		titulo.setDataDoVencimento(VENCIMENTO);
-		titulo.setMora(new BigDecimal(925.11));
+
 
 
 		clABC = CampoLivreFactory.create(titulo);
@@ -116,7 +116,7 @@ public class TestLinhaDigitavelBanrisul {
 	@Test
 	public void testWrite() {
 		System.out.println(linhaDigitavel.write());
-		//assertEquals("04192.10240 30096.622508 04990.140107 8 75070000113465", linhaDigitavel.write());
+		assertEquals("04192.10240 30096.622508 05184.740289 9 75860000399610", linhaDigitavel.write());
 
 	}
 
