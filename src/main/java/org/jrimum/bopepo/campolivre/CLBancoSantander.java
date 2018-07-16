@@ -113,6 +113,12 @@ class CLBancoSantander extends AbstractCLSantander implements CampoLivre {
 	 */
 	private static final int CARTEIRA_SIMPLES_SEM_REGISTRO = 102;
 
+	/**
+	 * 104- Cobrança – Com Registro
+	 */
+	private static final int CARTEIRA_COM_REGISTRO = 104;
+
+	
 	CLBancoSantander(Titulo titulo) {
 		super(FIELDS_LENGTH);
 
@@ -147,6 +153,7 @@ class CLBancoSantander extends AbstractCLSantander implements CampoLivre {
 		case CARTEIRA_RAPIDA_COM_REGISTRO:
 		case CARTEIRA_RAPIDA_SEM_REGISTRO:
 		case CARTEIRA_SIMPLES_SEM_REGISTRO:
+		case CARTEIRA_COM_REGISTRO:
 
 			this.add(new FixedField<Integer>(conta.getCarteira().getCodigo(), 3,
 					Fillers.ZERO_LEFT));
