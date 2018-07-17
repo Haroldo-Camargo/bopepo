@@ -306,7 +306,7 @@ public enum BancosSuportados{
 	 * 
 	 * @since 0.2
 	 */
-	BANCOOB("756", "02038232000164", "BANCO COOPERATIVO DO BRASIL S.A. - BANCOOB", "Banco Comercial Cooperativo");
+	BANCOOB("756", "02038232000164", "BANCO COOPERATIVO DO BRASIL S.A. - BANCOOB", "Banco Comercial Cooperativo"),
 	
 	/**
 	 * Singleton <code>Map</code> para pesquisa por bancos suportados no
@@ -314,6 +314,24 @@ public enum BancosSuportados{
 	 * 
 	 * @since 0.2
 	 */
+	
+	DAYCOVAL("707", "62232889000190", "BANCO DAYCOVAL S.A.", "Banco Múltiplo"),
+	
+	/**
+	 * Singleton <code>Map</code> para pesquisa por bancos suportados no
+	 * componente.
+	 * 
+	 * @since 0.2
+	 */
+	
+	SOFISA("637", "60889128000180", "BANCO SOFISA S.A.", "Banco Múltiplo");
+	
+	/**
+	 * Singleton <code>Map</code> para pesquisa por bancos suportados no
+	 * componente.
+	 * 
+	 * @since 0.2
+	 */	
 	public static final Map<String, BancosSuportados> suportados = new HashMap<String, BancosSuportados>(
 			BancosSuportados.values().length);
 
@@ -340,6 +358,8 @@ public enum BancosSuportados{
 		suportados.put(BANCO_DE_BRASILIA.codigoDeCompensacaoBACEN, BANCO_DE_BRASILIA);
 		suportados.put(CECRED.codigoDeCompensacaoBACEN, CECRED);
 		suportados.put(BANCO_ABC.codigoDeCompensacaoBACEN, BANCO_ABC);
+		suportados.put(DAYCOVAL.codigoDeCompensacaoBACEN, DAYCOVAL);
+		suportados.put(SOFISA.codigoDeCompensacaoBACEN, SOFISA);
 	}
 
 	/**
