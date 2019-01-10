@@ -5,7 +5,7 @@
 	<artifactId>jrimum-bopepo</artifactId>
 	<packaging>jar</packaging>
 	<name>Projeto Bopepo</name>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<description>
 		Projeto open source de componentes de software para o domínio de negócios do Brasil.
 	</description>
@@ -22,7 +22,7 @@
 		<connection>scm:git:git@github.com:hailtonwba/bopepo.git</connection>
 		<url>scm:git:git@github.com:hailtonwba/bopepo.git</url>
 		<developerConnection>scm:git:git@github.com:hailtonwba/bopepo.git</developerConnection>
-		<tag>v1.0.3</tag>
+		<tag>v1.0.4</tag>
 	</scm>
 	<developers>
 		<developer>
