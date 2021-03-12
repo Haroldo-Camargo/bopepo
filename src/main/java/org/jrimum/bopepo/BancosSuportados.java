@@ -215,6 +215,8 @@ public enum BancosSuportados{
 	 */
 	BANCO_ABC("246", "28195667000106", "BANCO ABC BRASIL", "Banco Múltiplo"),
 	
+	BANCO_MONEY_PLUS("274", "34337707000100", "BMP Money Plus Sociedade de Crédito Direto S/A", "BMP Money Plus"),
+	
 	/**
 	 * Tipo enumerado que representa o <strong>Banco Itaú</strong>, código de
 	 * compensação <strong><tt>341</tt></strong> <a
@@ -360,6 +362,7 @@ public enum BancosSuportados{
 		suportados.put(BANCO_ABC.codigoDeCompensacaoBACEN, BANCO_ABC);
 		suportados.put(DAYCOVAL.codigoDeCompensacaoBACEN, DAYCOVAL);
 		suportados.put(SOFISA.codigoDeCompensacaoBACEN, SOFISA);
+		suportados.put(BANCO_MONEY_PLUS.codigoDeCompensacaoBACEN, BANCO_MONEY_PLUS);
 	}
 
 	/**
