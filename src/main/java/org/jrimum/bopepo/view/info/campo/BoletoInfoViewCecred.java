@@ -47,7 +47,7 @@ public class BoletoInfoViewCecred extends AbstractBoletoInfoCampoView {
 	@Override
 	public String getTextoFcLocalPagamento() {
 		String textoFcLocalPagamento = super.getTextoFcLocalPagamento();
-		return isBlank(textoFcLocalPagamento) ? "PAGAVEL PREFERENCIALMENTE NAS COOPERATIVAS DO SISTEMA CECRED." : textoFcLocalPagamento;
+		return isBlank(textoFcLocalPagamento) ? "PAGAVEL PREFERENCIALMENTE NAS COOPERATIVAS DO SISTEMA AILOS." : textoFcLocalPagamento;
 	}
 	
 	/**
