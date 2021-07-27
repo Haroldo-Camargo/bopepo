@@ -28,7 +28,7 @@ public class TestBoletoInfoViewCecred {
 	@Test
 	public void deve_retornar_local_de_pagamento_padrao() {
 		boleto.setLocalPagamento(null);
-		assertEquals("PAGAVEL PREFERENCIALMENTE NAS COOPERATIVAS DO SISTEMA CECRED.", view.getTextoFcLocalPagamento());
+		assertEquals("PAGAVEL PREFERENCIALMENTE NAS COOPERATIVAS DO SISTEMA AILOS.", view.getTextoFcLocalPagamento());
 	}
 	
 	@Test
