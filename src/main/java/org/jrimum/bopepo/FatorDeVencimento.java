@@ -81,7 +81,7 @@ public class FatorDeVencimento{
 	 * 07/10/1997.
 	 * </p>
 	 */
-	private static final Date DATA_LIMITE_DO_FATOR_DE_VENCIMENTO = new GregorianCalendar(2025, Calendar.FEBRUARY, 21).getTime();
+	private static final Date DATA_LIMITE_DO_FATOR_DE_VENCIMENTO = new GregorianCalendar(2052, Calendar.JULY, 9).getTime();
 
 	/**
 	 * <p>
@@ -144,7 +144,13 @@ public class FatorDeVencimento{
 			
 			checkIntervalo(dataTruncada);
 				
-			return (int) Dates.calculeDiferencaEmDias(DATA_BASE_DO_FATOR_DE_VENCIMENTO, dataTruncada);
+			int fatorVenc = (int) Dates.calculeDiferencaEmDias(DATA_BASE_DO_FATOR_DE_VENCIMENTO, dataTruncada);
+			
+			if (fatorVenc > 9999) {
+				fatorVenc = fatorVenc - 9000;
+			}
+
+			return fatorVenc;
 		}
 	}
 	

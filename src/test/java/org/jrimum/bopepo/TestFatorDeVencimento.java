@@ -59,7 +59,7 @@ public class TestFatorDeVencimento {
 	@Test(expected = IllegalArgumentException.class)
 	public void testToFatorComDataMaiorQueDataLimite() {
 
-		data.set(2025, Calendar.FEBRUARY, 22);
+		data.set(2052, Calendar.JULY, 31);
 
 		FatorDeVencimento.toFator(data.getTime());
 	}
@@ -75,6 +75,9 @@ public class TestFatorDeVencimento {
 
 		data.set(2025, Calendar.FEBRUARY, 21);
 		assertEquals(9999, FatorDeVencimento.toFator(data.getTime()));
+
+		data.set(2025, Calendar.FEBRUARY, 22);
+		assertEquals(1000, FatorDeVencimento.toFator(data.getTime()));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
