@@ -5,7 +5,7 @@
 	<artifactId>jrimum-bopepo</artifactId>
 	<packaging>jar</packaging>
 	<name>Projeto Bopepo</name>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<description>
 		Projeto open source de componentes de software para o domínio de negócios do Brasil.
 	</description>
@@ -60,22 +60,6 @@
 					<source>1.5</source>
 					<target>1.5</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<additionalparam>-Xdoclint:none</additionalparam>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
