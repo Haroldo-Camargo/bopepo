@@ -189,6 +189,15 @@ public enum BancosSuportados{
 	CECRED("085", "05.463.212/0001-29", "COOPERATIVA CENTRAL DE CRÉDITO URBANO - CECRED", "Cooperativa de Crédito"),
 	
 	/**
+	 * Tipo enumerado que representa o Banco <strong>Finaxis</strong>, código
+	 * de compensação <strong><tt>094</tt></strong> <a
+	 * href="http://www.finaxis.com.br">site</a>.
+	 * 
+	 * @since 0.2
+	 */
+	BANCO_FINAXIS("094", "11758741000152", "BANCO FINAXIS S.A.", "Banco Finaxis"),
+
+	/**
 	 * Tipo enumerado que representa o Banco <strong>Caixa Econômica Federal</strong>,
 	 * código de compensação <strong><tt>104</tt></strong> <a
 	 * href="http://www.caixa.gov.br">site</a>.
@@ -341,6 +350,7 @@ public enum BancosSuportados{
 
 		suportados.put(BANCO_DO_BRASIL.codigoDeCompensacaoBACEN, BANCO_DO_BRASIL);
 		suportados.put(BANCO_DO_NORDESTE_DO_BRASIL.codigoDeCompensacaoBACEN, BANCO_DO_NORDESTE_DO_BRASIL);
+		suportados.put(BANCO_FINAXIS.codigoDeCompensacaoBACEN, BANCO_FINAXIS);
 		suportados.put(CAIXA_ECONOMICA_FEDERAL.codigoDeCompensacaoBACEN, CAIXA_ECONOMICA_FEDERAL);
 		suportados.put(BANCO_BRADESCO.codigoDeCompensacaoBACEN, BANCO_BRADESCO);
 		suportados.put(BANCO_ABN_AMRO_REAL.codigoDeCompensacaoBACEN, BANCO_ABN_AMRO_REAL);
