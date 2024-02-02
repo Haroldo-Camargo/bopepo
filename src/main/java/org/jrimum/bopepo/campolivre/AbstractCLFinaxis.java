@@ -51,9 +51,9 @@ import org.jrimum.domkee.financeiro.banco.febraban.Titulo;
 abstract class AbstractCLFinaxis extends AbstractCampoLivre {
 
 	/**
-	 * {@code serialVersionUID = -1733227746617862639L}
+	 * 
 	 */
-	private static final long serialVersionUID = -1733227746617862639L;
+	private static final long serialVersionUID = 6935956951922959201L;
 
 	/**
 	 * <p>Cria um campo livre com um determinado número de campos</p>
@@ -71,6 +71,6 @@ abstract class AbstractCLFinaxis extends AbstractCampoLivre {
 
 	protected static CampoLivre create(Titulo titulo){
 		
-		return new CLMoneyPlus().build(titulo);
+		return new CLFinaxis().build(titulo);
 	}
 }

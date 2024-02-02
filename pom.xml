@@ -5,7 +5,7 @@
 	<artifactId>jrimum-bopepo</artifactId>
 	<packaging>jar</packaging>
 	<name>Projeto Bopepo</name>
-	<version>1.0.9</version>
+	<version>1.0.10</version>
 	<description>
 		Projeto open source de componentes de software para o domínio de negócios do Brasil.
 	</description>
