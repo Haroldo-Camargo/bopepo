@@ -222,7 +222,8 @@ abstract class AbstractCampoLivre extends BlockOfFields implements CampoLivre {
 					case BANCO_ABC: return AbstractCLAbc.create(titulo);
 					case BANCO_MONEY_PLUS: return AbstractCLMoneyPlus.create(titulo);
 					case BANCO_FINAXIS: return AbstractCLFinaxis.create(titulo);
-					
+					case SOFISA: return AbstractCLSofisa.create(titulo);
+
 					default:
 						/*
 						 * Se chegar neste ponto e nenhum campo livre foi definido, então é
