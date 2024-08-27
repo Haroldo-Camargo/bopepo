@@ -108,9 +108,9 @@ class CLSofisa extends AbstractCLSofisa {
 	private static final long serialVersionUID = -1253549781074159862L;
 
 	/**
-	 * Número de campos = 6.
+	 * Número de campos = 5.
 	 */
-	private static final Integer FIELDS_LENGTH = Integer.valueOf(6);
+	private static final Integer FIELDS_LENGTH = Integer.valueOf(5);
 
 	/**
 	 * Tamanho do campo Agência = 4. 
@@ -128,9 +128,9 @@ class CLSofisa extends AbstractCLSofisa {
 	private static final Integer NOSSO_NUMERO_LENGTH = Integer.valueOf(10);
 	
 	/**
-	 * Tamanho do campo Conta = 6. 
+	 * Tamanho do campo Conta = 7. 
 	 */
-	private static final Integer CONTA_LENGTH = Integer.valueOf(6);
+	private static final Integer CONTA_LENGTH = Integer.valueOf(7);
 
 	/**
 	 * Cria um campo livre instanciando o número de fields ({@code FIELDS_LENGTH}) deste campo.
@@ -175,7 +175,6 @@ class CLSofisa extends AbstractCLSofisa {
 		this.add(new FixedField<Integer>(titulo.getContaBancaria().getAgencia().getCodigo(), AGENCIA_LENGTH, Fillers.ZERO_LEFT));
 		this.add(new FixedField<Integer>(titulo.getContaBancaria().getCarteira().getCodigo(), CARTEIRA_LENGTH, Fillers.ZERO_LEFT));
 		this.add(new FixedField<Integer>(titulo.getContaBancaria().getNumeroDaConta().getCodigoDaConta(), CONTA_LENGTH, Fillers.ZERO_LEFT));
-		this.add(new FixedField<String>(titulo.getContaBancaria().getNumeroDaConta().getDigitoDaConta(), 1, Fillers.ZERO_LEFT));
 		this.add(new FixedField<String>(titulo.getNossoNumero(), NOSSO_NUMERO_LENGTH, Fillers.ZERO_LEFT));
 		this.add(new FixedField<String>( titulo.getDigitoDoNossoNumero(), 1, Fillers.ZERO_LEFT));
 	}
