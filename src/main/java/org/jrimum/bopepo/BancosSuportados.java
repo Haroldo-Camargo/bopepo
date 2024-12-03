@@ -335,8 +335,17 @@ public enum BancosSuportados{
 	 * @since 0.2
 	 */
 	
-	SOFISA("637", "60889128000180", "BANCO SOFISA S.A.", "Banco Múltiplo");
+	SOFISA("637", "60889128000180", "BANCO SOFISA S.A.", "Banco Múltiplo"),
 	
+	/**
+	 * Tipo enumerado que representa o Banco <strong>BNK</strong>, código
+	 * de compensação <strong><tt>547</tt></strong> <a
+	 * href="http://www.bnk.com.br">site</a>.
+	 * 
+	 * @since 0.2
+	 */
+	BANCO_BNK("547", "48128760000105", "BANCO BNK", "Banco BDigital");
+
 	/**
 	 * Singleton <code>Map</code> para pesquisa por bancos suportados no
 	 * componente.
@@ -373,6 +382,7 @@ public enum BancosSuportados{
 		suportados.put(DAYCOVAL.codigoDeCompensacaoBACEN, DAYCOVAL);
 		suportados.put(SOFISA.codigoDeCompensacaoBACEN, SOFISA);
 		suportados.put(BANCO_MONEY_PLUS.codigoDeCompensacaoBACEN, BANCO_MONEY_PLUS);
+		suportados.put(BANCO_BNK.codigoDeCompensacaoBACEN, BANCO_BNK);
 	}
 
 	/**
